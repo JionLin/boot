@@ -1,0 +1,12 @@
+person:
+  age: 18
+  boss: true
+  birth: 2017/12/12
+  last-name: johnny
+  dog:
+    age: 2
+    name: tom
+  maps: {k1: v1,k2: v2}
+  lists:
+    - lisi
+    - wangwu
