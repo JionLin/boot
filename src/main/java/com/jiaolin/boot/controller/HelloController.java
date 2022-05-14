@@ -21,7 +21,9 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String getHello(){
+        log.info("github 测试提交");
         log.info(person.toString());
         return "hello";
     }
+
 }
