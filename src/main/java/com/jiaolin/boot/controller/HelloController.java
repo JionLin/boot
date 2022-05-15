@@ -3,8 +3,7 @@ package com.jiaolin.boot.controller;
 import com.jiaolin.boot.config.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author johnny
@@ -19,11 +18,18 @@ public class HelloController {
     @Autowired
     private Person person;
 
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String getHello(){
         log.info("github 测试提交");
         log.info(person.toString());
         return "hello";
     }
 
+
+    @PostMapping("/hello")
+    public String hello(@RequestBody String values){
+        log.info("github 测试提交");
+        log.info(person.toString());
+        return "hello";
+    }
 }
