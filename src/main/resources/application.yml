@@ -14,7 +14,13 @@ person:
 server:
   context-path: /boot
   port: 8081
-
-
-
+logging:
+  level:
+    com:
+      jiaolin:
+        boot: debug
+#        指定日志到文件以及文件到地址。
+#  file: /Users/johnny/logs/boot.log
+#  指定日志文件的路径,默认文件名为spring.log
+#  path: /Users/johnny/logs
 

@@ -15,13 +15,17 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class HelloController {
 
+
     @Autowired
     private Person person;
 
     @GetMapping("/hello")
     public String getHello(){
-        log.info("github 测试提交");
-        log.info(person.toString());
+        log.trace("这是log trace...");
+        log.debug("这是log debug...");
+        log.info("这是log info...");
+        log.warn("这是log warn...");
+        log.error("这是log error...");
         return "hello";
     }
 
@@ -29,7 +33,6 @@ public class HelloController {
     @PostMapping("/hello")
     public String hello(@RequestBody String values){
         log.info("github 测试提交");
-        log.info(person.toString());
         return "hello";
     }
 }
