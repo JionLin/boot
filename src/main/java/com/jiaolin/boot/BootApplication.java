@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 第一:使用配置文件,
  * 第二:在虚拟机里面进行配置 -Dspring.profiles.active=dev
  * 第三:打成jar包,进行输入命令 java -jar boot --spring.profiles.active=dev
+ * 设计到里面到精华原理。
  */
 @SpringBootApplication
 public class BootApplication {
