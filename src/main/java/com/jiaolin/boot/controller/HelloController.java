@@ -1,6 +1,7 @@
 package com.jiaolin.boot.controller;
 
 import com.jiaolin.boot.config.Person;
+import com.jiaolin.boot.exception.MyException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,10 @@ public class HelloController {
     private Person person;
 
     @GetMapping("/hello")
-    public String getHello(){
+    public String getHello(@RequestParam(value = "value") String value){
+        if (value.equals("xxx")) {
+            throw new MyException("value 为xxx ");
+        }
         log.trace("这是log trace...");
         log.debug("这是log debug...");
         log.info("这是log info...");
