@@ -1,5 +1,6 @@
 package com.jiaolin.boot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 设计到里面到精华原理。
  */
 @SpringBootApplication
+@MapperScan(value = "com.jiaolin.boot.maper")
 public class BootApplication {
 
     public static void main(String[] args) {
