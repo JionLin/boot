@@ -3,8 +3,10 @@ package com.jiaolin.boot.controller;
 import cn.hutool.json.JSON;
 import com.jiaolin.boot.config.Person;
 import com.jiaolin.boot.entity.Department;
+import com.jiaolin.boot.entity.Employee;
 import com.jiaolin.boot.exception.MyException;
 import com.jiaolin.boot.maper.DepartmentMapper;
+import com.jiaolin.boot.maper.EmpMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class HelloController {
 
     @Autowired
     private DepartmentMapper departmentMapper;
+
+    @Autowired
+    private EmpMapper empMapper;
 
     @Autowired
     private Person person;
@@ -61,6 +66,15 @@ public class HelloController {
         Department dept = departmentMapper.getDeptById(id);
         return dept;
     }
+
+    @GetMapping("/emp/{id}")
+    @ResponseBody
+    public Employee getEmployee(@PathVariable(value = "id")Integer id) {
+        log.info("github 测试提交");
+        Employee employee = empMapper.getEmployeeById(id);
+        return employee;
+    }
+
 
 
 }
