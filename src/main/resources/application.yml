@@ -15,8 +15,15 @@ person:
 spring:
   profiles:
     active: test
-  resources:
-    static-locations:
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/johnny
+    driver-class-name: com.mysql.jdbc.Driver
+    schema:
+      - classpath:dep.sql
+
+
 ---
 server:
   port: 8080
@@ -27,6 +34,9 @@ spring:
   profiles: test
 server:
   port: 8081
+
+
+
 #logging:
 #  level:
 #    com:

@@ -18,11 +18,6 @@ public class MyHandlerInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                              Object handler) throws Exception {
-        log.info("前置过滤器");
-        if (request.getHeader("token").isEmpty()){
-            log.info("token 为 空");
-            return false;
-        }
         return true;
     }
 
