@@ -20,6 +20,7 @@ spring:
     username: root
     url: jdbc:mysql://localhost:3306/johnny
     driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
 #    schema:
 #      - classpath:dep.sql
 
