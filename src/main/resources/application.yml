@@ -20,8 +20,8 @@ spring:
     username: root
     url: jdbc:mysql://localhost:3306/johnny
     driver-class-name: com.mysql.jdbc.Driver
-    schema:
-      - classpath:dep.sql
+#    schema:
+#      - classpath:dep.sql
 
 
 ---
