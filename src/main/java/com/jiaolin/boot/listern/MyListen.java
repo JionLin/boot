@@ -15,11 +15,11 @@ public class MyListen implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        System.out.println("servletContextEvent init....");
+//        System.out.println("servletContextEvent init....");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
-        System.out.println("servletContextEvent destroy");
+//        System.out.println("servletContextEvent destroy");
     }
 }
