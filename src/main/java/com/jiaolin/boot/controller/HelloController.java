@@ -1,6 +1,6 @@
 package com.jiaolin.boot.controller;
 
-import cn.hutool.json.JSON;
+import com.jiaolin.HelloService;
 import com.jiaolin.boot.config.Person;
 import com.jiaolin.boot.entity.Department;
 import com.jiaolin.boot.entity.Employee;
@@ -76,5 +76,13 @@ public class HelloController {
     }
 
 
+
+    @Autowired
+    HelloService helloService;
+
+    @GetMapping("/johnny")
+    public String SayHello(@RequestParam(value = "value") String value){
+        return  helloService.SayHello(value);
+    }
 
 }
