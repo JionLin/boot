@@ -1,6 +1,7 @@
 package com.jiaolin.boot;
 
 
+import com.jiaolin.boot.config.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class BootApplicationTests {
     @Autowired
     DataSource dataSource;
 
+    @Autowired
+    private Person person;
 
     @Test
     public void test1() throws SQLException {
@@ -29,6 +32,12 @@ public class BootApplicationTests {
         System.out.println(connection);
         connection.close();
     }
+
+    @Test
+    public void  test02(){
+        System.out.println(person);
+    }
+
 
 
 
